@@ -1,7 +1,5 @@
 package migueljaque;
 
- // Singleton. Ref: https://www.baeldung.com/java-singleton
-
 public class Controlador1{
 
     private ControladorPrincipal controlador;

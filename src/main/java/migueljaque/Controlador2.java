@@ -1,7 +1,5 @@
 package migueljaque;
 
- // Singleton. Ref: https://www.baeldung.com/java-singleton
-
 public class Controlador2{
 
     private ControladorPrincipal controlador;
@@ -11,6 +9,8 @@ public class Controlador2{
     }
 
     public void irAVista1() {
+        //Para usar el modelo
+        controlador.getModelo().crearProducto(null);
         controlador.irAVista1();
     }
 }
