@@ -1,3 +1,12 @@
+/**
+ * App.java
+ * Lanzador de la aplicación.
+ * Responsabilidad:
+ *  - Crear el Controlador Principal.
+ * Autor: Miguel Jaque Barbero <mjaque@migueljaque.com>
+ * Licencia: GPL v3.
+ */
+
 package migueljaque;
 
 import javafx.application.Application;

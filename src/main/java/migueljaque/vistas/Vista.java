@@ -1,19 +1,27 @@
-package migueljaque.vistas;
+/**
+ * Vista.java
+ * Clase base de las vistas.
+ * Responsabilidad de las vistas:
+ *  - Crear y gestionar el interfaz FXML.
+ *  - Atender los eventos de usuario (click, mousemove, scroll...).
+ *  - Validar los datos del usuario.
+ *  - Transmitir al controlador las peticiones del usuario.
+ * Autor: Miguel Jaque Barbero <mjaque@migueljaque.com>
+ * Licencia: GPL v3.
+ */
+
+ package migueljaque.vistas;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import migueljaque.App;
-import migueljaque.controladores.Controlador;
 
 import java.io.IOException;
 
 public abstract class Vista {
 
-    protected Parent cargarFXML(String ficheroInterfaz, Vista vista) throws IOException {
-        System.out.println(ficheroInterfaz);
-        System.out.println(App.class);
-        System.out.println(App.class.getResource(ficheroInterfaz));
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(ficheroInterfaz));
+    protected Parent cargarInterfaz(String ficheroInterfaz, Vista vista) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Vista.class.getResource(ficheroInterfaz));
         fxmlLoader.setController(vista);
         return fxmlLoader.load();
     }

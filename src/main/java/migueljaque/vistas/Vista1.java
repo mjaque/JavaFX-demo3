@@ -19,7 +19,7 @@ public class Vista1 extends Vista{
     public Vista1(Controlador1 controlador) throws IOException{
         super();
         this.controlador = controlador;
-        nodoInterfaz = cargarFXML(ficheroInterfaz, this);
+        nodoInterfaz = cargarInterfaz(ficheroInterfaz, this);
     }
     
     @FXML
