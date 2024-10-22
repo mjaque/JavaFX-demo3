@@ -3,6 +3,7 @@ package migueljaque.vistas;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import migueljaque.controladores.Controlador;
 import migueljaque.controladores.Controlador2;
@@ -12,14 +13,15 @@ public class Vista2  extends Vista{
     private Controlador2 controlador;
     protected final String ficheroInterfaz = "interfaz2.fxml";
     private Parent nodoInterfaz;
-
+    private Scene escena;
+    
     @FXML
     public Button boton1;
     
     public Vista2(Controlador2 controlador) throws IOException{
         super();
         this.controlador = controlador;
-        nodoInterfaz = cargarInterfaz(ficheroInterfaz, this);
+        escena = new Scene(cargarInterfaz(ficheroInterfaz, this));
     }
     
     @FXML
@@ -28,8 +30,8 @@ public class Vista2  extends Vista{
         controlador.irAVista1();
     }
 
-    public Parent getInterfaz() {
-        return nodoInterfaz;
+    public Scene getEscena() {
+        return escena;
     }
     
 }

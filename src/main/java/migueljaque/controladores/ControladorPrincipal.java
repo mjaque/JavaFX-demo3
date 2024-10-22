@@ -23,20 +23,19 @@ public class ControladorPrincipal extends Controlador {
         controlador2 = new Controlador2(this);
 
         //La primera escena se carga de forma especial
-        escena = new Scene(controlador1.getInterfazVista1());
-        escenario.setScene(escena);
+        escenario.setScene(controlador1.getEscena1());
         escenario.show();
     }
 
     public void irAVista1() {
         System.out.println("ControladorPrincipal 'irAVista1'");
-        escena.setRoot(controlador1.getInterfazVista1());
+        escenario.setScene(controlador1.getEscena1());
         controlador1.mostrar();
     }
 
     public void irAVista2() {
         System.out.println("ControladorPrincipal 'irAVista2'");
-        escena.setRoot(controlador2.getInterfazVista1());
+        escenario.setScene(controlador2.getEscena1());
         controlador2.mostrar();
     }
 

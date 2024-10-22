@@ -2,6 +2,7 @@ package migueljaque.controladores;
 
 import java.io.IOException;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import migueljaque.vistas.Vista1;
 
 public class Controlador1 extends Controlador{
@@ -18,12 +19,12 @@ public class Controlador1 extends Controlador{
         controlador.irAVista2();
     }
 
-    public Parent getInterfazVista1() {
-        return vista.getInterfaz();
-    }
-
     @Override
     public void mostrar() {
         vista.mostrar();
+    }
+
+    public Scene getEscena1() {
+        return vista.getEscena();
     }
 }
