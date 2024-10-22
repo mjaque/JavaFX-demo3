@@ -1,4 +1,4 @@
-package migueljaque;
+package migueljaque.modelos;
 
 import java.util.ArrayList;
 
